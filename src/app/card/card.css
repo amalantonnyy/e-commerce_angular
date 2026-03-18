@@ -1,0 +1,14 @@
+.card img{
+    object-fit:fill;
+    padding: 50px;
+    height: 400px;
+    width: 100%;
+
+}
+.card{
+    
+    height: 100%;
+}
+.cardp{
+    color: red;
+}

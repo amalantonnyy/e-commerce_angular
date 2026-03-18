@@ -1,0 +1,15 @@
+<h2>Our Products</h2>
+<div class="mt-4">
+<div class="container text-center justift-content-around d-flex">
+  <div class="row g-5">
+      @for (item of items; track item.id) {
+    <div class="col-4">
+     <app-card [item] ="item"></app-card>
+    </div>
+    
+    } @empty {
+    <li>There are no items.</li>
+    }
+  </div>
+</div>
+</div>

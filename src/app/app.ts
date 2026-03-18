@@ -1,0 +1,16 @@
+import { Component, signal } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { Navbar } from './navbar/navbar';
+import { Footer } from './footer/footer';
+import { Home } from './home/home';
+import { Detail } from './detail/detail';
+
+@Component({
+  selector: 'app-root',
+  imports: [Navbar,Footer,RouterOutlet,],
+  templateUrl: './app.html',
+  styleUrl: './app.css'
+})
+export class App {
+  protected readonly title = signal('project2');
+}

@@ -1,0 +1,13 @@
+
+        <div class="card h-100 d-flex flex-col">
+          <img src="{{item.image}}" class="card-img-top" alt="...">
+
+          <div class="card-body  ">
+            <h5 class="card-title">{{item.title}}</h5>
+            <p class="card-text">{{item.description}}</p>
+             <p class="cardp ">Price: ${{item.price}}</p>
+            <a href="" class="btn btn-outline-success mt-auto" [routerLink]="['/product',item.id]">View product</a>
+          </div>
+        </div>
+
+      

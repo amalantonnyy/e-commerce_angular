@@ -1,0 +1,31 @@
+<div class="container mt-5">
+  <div class="card p-3">
+    <div class="row align-items-center">
+
+      <div class="col-md-6">
+        <img src="{{item.image}}" class="img-fluid rounded" alt="Product">
+      </div>
+
+      <div class="col-md-6 text-start">
+        <h3>{{item.title}}</h3>
+
+        <div class="rating">
+         
+          <h4> Rating : {{item.rating.rate}}</h4>
+        
+
+        <p> 
+        {{item.description}}
+        </p>
+
+        <h4 class="text-success">${{item.price}}</h4>
+
+        <button class="btn btn-outline-secondary mt-2">Buy Now</button>
+           
+
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
