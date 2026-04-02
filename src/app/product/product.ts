@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ApiService } from '../api-service';
 import { Card } from '../card/card';
 
@@ -8,15 +8,20 @@ import { Card } from '../card/card';
   templateUrl: './product.html',
   styleUrl: './product.css',
 })
-export class product {
+export class product implements OnInit {
   items:any[] = []
 
   constructor(private apiservice: ApiService, private cdr: ChangeDetectorRef){}
 
   ngOnInit(){
-    this.apiservice.getproducts().subscribe((data: any) =>{
-      this.items = data;
-      this.cdr.detectChanges();
+    this.apiservice.getproducts().subscribe({
+      next: (data: any) => {
+        this.items = data.products;
+        this.cdr.detectChanges();
+      },
+      error: (err) => {
+        console.error('Error fetching products:', err);
+      }
     });
   }
 }

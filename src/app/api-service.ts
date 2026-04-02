@@ -8,11 +8,11 @@ export class ApiService {
   constructor(private http: HttpClient){}
 
 getproducts(){
-return this.http.get("https://fakestoreapi.com/products")
+return this.http.get("https://dummyjson.com/products")
 
 }
 getitem(id: number){
-return this.http.get(`https://fakestoreapi.com/products/ ${id}`)
+return this.http.get(`https://dummyjson.com/products/${id}`)
 
 }
 }
